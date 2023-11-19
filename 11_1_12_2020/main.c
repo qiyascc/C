@@ -1,44 +1,44 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
 
 // ters mantık kuruyor dikkat
 int get_mid(x, y, z)
-{	
+{   
 
-	if (!(x > y && x > z || x<y && x<z)) //içerideki ifade de normalde x kesinlikle ortanca değil.ifade x en küçükse veya en büyükse demek.
-		return x;							// bunun değilini alırsak kesinlikle ortanca olur. bunun değili alınmış. Yani ikiside değil.ortanca demek.
-	else if(!(y>x && y>z || y < x && y < z))  // aynı durum buradada geçerli
-		return y;
-	
-	return z;
+    if (!(x > y && x > z || x<y && x<z)) //içerideki ifade de normalde x kesinlikle ortanca değil.ifade x en küçükse veya en büyükse demek.
+            return x;                    // bunun değilini alırsak kesinlikle ortanca olur. bunun değili alınmış. Yani ikiside değil.ortanca demek.
+    else if(!(y>x && y>z || y < x && y < z))  // aynı durum buradada geçerli
+            return y;
+    
+    return z;
 }
 
 int main()
-{	// logic operatorler doğru veya yanlışı 0/1 diye çevirir C.
-	// bir ifadenin değilinin değili 1 veya sıfırdır. x = 4   !!x = 1 dir. !x = 0 dır.
-	// && logic ve.  & bitsel ve
-	// ||logic veya.  | bitsel veya
+{   // logic operatorler doğru veya yanlışı 0/1 diye çevirir C.
+    // bir ifadenin değilinin değili 1 veya sıfırdır. x = 4   !!x = 1 dir. !x = 0 dır.
+    // && logic ve.  & bitsel ve
+    // ||logic veya.  | bitsel veya
 
-	/* 3 adet logic operator var
-	 2 ! logical not
-	 11 && logical and
-	 12 || logical or
+    /* 3 adet logic operator var
+     2 ! logical not
+     11 && logical and
+     12 || logical or
 
-	 ------------------------------
+     ------------------------------
 
-	 ! exp
-	 exp1 && exp2
-	 exp1 || exp2
-	 exp ? :
-	 if(exp)
-	 while(exp)
-	 do while(exp)
-	 for(;exp;)
+     ! exp
+     exp1 && exp2
+     exp1 || exp2
+     exp ? :
+     if(exp)
+     while(exp)
+     do while(exp)
+     for(;exp;)
 
-	 logical yorumlamada eğer ifadenin değeri
-	 non zero -> true
-	 zero -> false değeridir.
+     logical yorumlamada eğer ifadenin değeri
+     non zero -> true
+     zero -> false değer
 
 
 	 */
